@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: todo-delete-tasks-api-ingress
+spec:
+  ingressClassName: azure-application-gateway
+  rules:
+    - host: tododeletetask.techno028.shop
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: todo-delete-tasks-api
+                port:
+                  number: 80
+                  
