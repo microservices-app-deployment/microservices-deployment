@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: {{ .Release.Name }}-todo-get-task-api-ingress
 spec:
-  ingressClassName: {{ .Values.common.ingressClassName }}azure-application-gateway
+  ingressClassName: {{ .Values.common.ingressClassName }}
   rules:
     - host: {{ .Values.gettask.host }}
       http:
