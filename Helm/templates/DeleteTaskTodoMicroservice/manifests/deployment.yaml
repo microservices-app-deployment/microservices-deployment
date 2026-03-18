@@ -17,7 +17,7 @@ spec:
        - name: {{ .Release.Name }}-todo-delete-tasks-api
          image: {{ .Values.common.acr_name }}/{{ .Values.deletetask.image.image_name }}:{{ .Values.deletetask.image.version }}
          ports:
-          - containerPort: {{ .Values.deletetask.ports.containerPort }}8000
+          - containerPort: {{ .Values.deletetask.ports.containerPort }}
          env: 
            - name: {{ .Values.common.env.name }}
              value: {{ .Values.common.env.value}}

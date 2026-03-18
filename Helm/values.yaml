@@ -28,8 +28,6 @@ deletetask:
     containerPort: 8000
     port: 80
     targetPort: 8000
- 
-
   type: ClusterIP
   host: tododeletetask.techno028.shop
   pathType: Prefix
