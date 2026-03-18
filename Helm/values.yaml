@@ -1,0 +1,69 @@
+common:
+  acr_name: acrdevtodoproject0214.azurecr.io
+  ingressClassName: azure-application-gateway
+  env:
+    name: CONNECTION_STRING
+    value: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:sql-dev-todoapp-0214.database.windows.net,1433;Database=sqldb-dev-todoproject-0214;Uid=devopsadmin;Pwd=P@ssw01rd@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+addtask:
+  replicas: 2
+  image:
+    image_name: todo-add-tasks-api
+    version: v1
+  ports:
+    containerPort: 8000
+    port: 80
+    targetPort: 8000
+  
+  type: ClusterIP
+  host: todoaddtask.techno028.shop
+  pathType: Prefix
+  path: "/"
+#################################################################    
+deletetask:
+  replicas: 2
+  image:
+    image_name: todo-delete-tasks-api
+    version: v1
+  ports:
+    containerPort: 8000
+    port: 80
+    targetPort: 8000
+ 
+
+  type: ClusterIP
+  host: tododeletetask.techno028.shop
+  pathType: Prefix
+  path: "/"
+##########################################################
+gettask:
+  replicas: 2
+  image:
+    image_name: todo-get-tasks-api
+    version: v1
+  ports:
+    containerPort: 8000
+    port: 80
+    targetPort: 8000
+
+  type: ClusterIP
+  host: todogettask.techno028.shop
+  pathType: Prefix
+  path: "/"   
+###############################################################
+todoui:
+  replicas: 2
+  image:
+    image_name: micro-todo-ui-api
+    version: v2
+  ports:
+    containerPort: 8000
+    port: 80
+    targetPort: 8000
+
+  type: ClusterIP
+  host: todoui.techno028.shop
+  pathType: Prefix
+  path: "/"  
+
+
+    

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-todo-add-tasks-api
+spec:
+  type: {{ .Values.addtask.type }}
+  selector:
+    app: {{ .Release.Name }}-todo-add-tasks-api
+  ports:
+   - port: {{ .Values.addtask.ports.port }}
+     targetPort: {{ .Values.addtask.ports.targetPort }}
+      

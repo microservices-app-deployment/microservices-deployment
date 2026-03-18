@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-todo-ui
+spec:
+  replicas: {{ .Values.todoui.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-todo-ui
+  template:
+    metadata:
+      name: {{ .Release.Name }}-todo-ui
+      labels:
+        app: {{ .Release.Name }}-todo-ui
+    spec:
+      containers:
+      - name: {{ .Release.Name }}-todo-ui
+        image: {{ .Values.common.acr_name }}/{{ .Values.todoui.image.image_name }}:{{ .Values.todoui.image.version }}
+        ports:
+        - containerPort: {{ .Values.todoui.ports.containerPort }}
