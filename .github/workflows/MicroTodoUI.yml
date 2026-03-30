@@ -15,8 +15,8 @@ jobs:
     env:
       IMAGE_NAME: micro-todo-ui-api
       IMAGE_TAG: v2
-      ACR_NAME: acrdevtodoproject0214
-      ACR_LOGIN_SERVER: acrdevtodoproject0214.azurecr.io
+      ACR_NAME: acrdevtodoproject0326
+      ACR_LOGIN_SERVER: acrdevtodoproject0326.azurecr.io
 
     steps:
       - name: Checkout code
