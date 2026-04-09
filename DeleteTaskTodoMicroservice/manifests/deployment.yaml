@@ -15,9 +15,9 @@ spec:
     spec:
       containers:
        - name: todo-delete-tasks-api
-         image: acrdevtodoproject0326.azurecr.io/todo-delete-tasks-api:v1
+         image: acrdevtodoproject0409.azurecr.io/todo-delete-tasks-api:v1
          ports:
           - containerPort: 8000
          env: 
            - name: CONNECTION_STRING
-             value: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:sql-dev-todoapp-0326.database.windows.net,1433;Database=sqldb-dev-todoproject;Uid=devopsadmin;Pwd=P@ssw01rd@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+             value: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:sql-dev-todoapp-0409.database.windows.net,1433;Database=sqldb-dev-todoproject-0409;Uid=devopsadmin;Pwd=P@ssw01rd@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
