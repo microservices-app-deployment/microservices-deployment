@@ -54,10 +54,8 @@ todoui:
     image_name: micro-todo-ui-api
     version: v2
   ports:
-    containerPort: 8000
+    containerPort: 80
     port: 80
-    targetPort: 8000
-
   type: ClusterIP
   host: todoui.techno028.shop
   pathType: Prefix
