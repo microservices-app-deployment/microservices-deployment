@@ -15,8 +15,8 @@ jobs:
     env:
       IMAGE_NAME: todo-delete-tasks-api
       IMAGE_TAG: v1
-      ACR_NAME: acrdevtodoproject0409
-      ACR_LOGIN_SERVER: acrdevtodoproject0409.azurecr.io
+      ACR_NAME: acrdevproject4480
+      ACR_LOGIN_SERVER: acrdevproject4480.azurecr.io
 
     steps:
       - name: Checkout code
@@ -25,9 +25,9 @@ jobs:
       - name: Azure Login
         uses: Azure/login@v2.3.0
         with:
-          client-id: 8f7a87a5-5426-4f49-8c85-c20ea7ad7d5f
-          tenant-id: 65bc8c39-1242-4747-b237-239c15b77fed
-          subscription-id: db32f9ec-acc7-4507-90c8-6c0798ff4278
+          client-id: b6414b20-f23e-49d1-9440-0982e796ee54
+          tenant-id: b91213f6-d0f4-4a4a-969b-448f7d38bec6
+          subscription-id: bddd812c-5ad2-4c07-b152-4c3ff393fd76
           
       - name: Log in to ACR
         run: |
